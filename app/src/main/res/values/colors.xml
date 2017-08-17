@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+    <color name="appwidget_text">#ffffffff</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="album_text">#000000</color>
+    <color name="background">#14223f</color>
+    <color name="greycheck">#D8D8D8</color>
+    <color name="whitecheck">#FFFFFF</color>
+    <color name="app_theme_color">#f57f17</color>
+    <color name="seekbarcolor">#f4511e</color>
+    <color name="artist_background">#d3d3d3</color>
+
+    <color name="wave_color">#f4511e</color>
+    <color name="wave_color_inactive">#000000</color>
+    <color name="lyric_selected_text">#fff4511e</color>
+    <color name="black_translucence_text">#5a000000</color>
+    <color name="colorTouchHint">#FFFFFFFF</color>
+    <color name="toolbar_title_text">#ffffffff</color>
+    <color name="click_bg">#6621272B</color>
+
+    <!-- add by zhanghf -->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+
+    <color name="color_black">#FF000000</color>
+    <color name="color_gray">#FF888888</color>
+    <color name="color_rename">#FF00FFFF</color>
+    <color name="color_connected">#FF00FFFF</color>
+    <color name="color_bt_blue">#FF00FFFF</color>
+    <color name="color_tip_gray">#FF888888</color>
+
+    <color name="layout_normal_bg">#FFFAFAFA</color>
+    <color name="layout_dark_bg">#FF14223F</color>
+
+    <color name="title_bg">#FF182A4D</color>
+    <color name="title_text">#FFFFFFFF</color>
+
+    <color name="button_text1">#FF00B7BE</color>
+    <color name="button_text2">#FFF45858</color>
+
+    <color name="normal_text">#CC000000</color>
+    <color name="progress_text">#FF8C8C8C</color>
+    <color name="progress_text_light">#CCFFFFFF</color>
+    <color name="qr_tip_text">#FF00B7BE</color>
+    <color name="grid_item_text">#FFFFFFFF</color>
+
+    <color name="client_text_device">#FFFFFFFF</color>
+    <color name="client_text_state">#66FFFFFF</color>
+    <color name="client_text_device_my">#80FFFFFF</color>
+    <color name="new_playlist_edittext">#4d4d4d</color>
+    <color name="new_playlist_background">#fafafa</color>
+    <color name="new_playlist_edittext_div_line">#e1e1e1</color>
+
+    <!-- add end -->
+
+    <!-- add for ts music -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="progress_bar">#E3170D</color>
+    <color name="artist_list_bg">#FFFAF0</color>
+    <color name="home_music_list_bg">#C0C0C0</color>
+    <color name="album_image_bg">#404040</color>
+
+    <color name="red">#FF0000</color>
+    <color name="orange">#FF6100</color>
+    <color name="yellowish">#FF9912</color>
+    <color name="yellow">#FFFF00</color>
+
+    <color name="light_green">#7FFFD4</color>
+    <color name="green">#00FF00</color>
+    <color name="blue_green">#2E8B57</color>
+
+    <color name="light_blue">#87CEEB</color>
+    <color name="sky_blue">#1E90FF</color>
+    <color name="lake_blue">#4169E1</color>
+    <color name="dark_blue">#191970</color>
+
+    <color name="light_purple">#DA70D6</color>
+    <color name="purple">#A020F0</color>
+    <color name="red_purple">#FF00FF</color>
+    <color name="pink">#FF1493</color>
+
+    <!-- view color -->
+    <color name="top_background">#3D59AB</color>
+    <color name="home_background">#4F94CD</color>
+
+    <color name="bottom_background">#292421</color>
+    <color name="bottom_view_bg">#36648B</color>
+
+    <color name="list_item_light">#0CFFFFFF</color>
+    <color name="list_item_gray">#15FFFFFF</color>
+    <color name="queue_list_divide">#A6ABB6</color>
+
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:minHeight="40dp"
+    android:minWidth="180dp"
+    android:previewImage="@drawable/ic_launcher"
+    android:updatePeriodMillis="1000"
+    android:initialLayout="@layout/widget_layout"
+    android:resizeMode="horizontal|vertical"
+    android:widgetCategory="home_screen|keyguard" >
+
+    <!--
+        计算宽高尺寸的公式: (70*n)-30  n为部件所需的大小(占几格)   当前的就是  3X1
+        minWidth            widget的最小宽度
+        minHeight           widget的最小高度
+        previewImage        选择部件时 展示的图标
+        updatePeriodMillis  更新时间间隔
+        initialLayout       布局文件
+        resizeMode          表示支持的模式,这里支持水平和垂直
+        widgetCategory="keyguard|home_screen"   表示widget可添加的位置 锁屏界面|桌面
+    -->
+
+</appwidget-provider>

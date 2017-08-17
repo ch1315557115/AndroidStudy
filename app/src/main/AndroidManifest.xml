@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.cao_hao.androidstudy">
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".utils.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.HandlerTestAcitvity" />
+        <activity android:name=".Activity.SmsActivity" />
+        <activity android:name=".Activity.DbActivity" />
+        <activity android:name=".Activity.DbResultActivity" />
+        <activity android:name=".Activity.ContactActivity" />
+        <activity android:name=".Activity.ContentProviderActivity" />
+
+        <service android:name=".service.FloatService" />
+
+        <provider
+            android:name=".provider.MyContentPrvoider"
+            android:authorities="com.example.cao_hao.androidstudy.mycontentprovider"
+            android:exported="true" />
+
+        <activity android:name=".Activity.FileActivity" />
+        <activity android:name=".Activity.PoPupActivity" />
+        <activity android:name=".Activity.ViewActivity" />
+        <activity android:name=".Activity.MenuActivity" />
+        <activity android:name=".Activity.AsyncTaskActivity" />
+
+        <receiver android:name=".widget.ClickAppWidget">
+            <intent-filter>
+                <action android:name="click"></action>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"></action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_config" />
+            <!--
+ action里的值Android.appwidget.action.APPWIDGET_UPDATE是默认的,
+   meta-data里的name也是默认值,resource的引用的是之前新建的widget配置文件。
+
+    intent-filter >元素必须包含一个<action>元素与android:name属性。这个属性指定AppWidgetProvider接受系统
+    的ACTION_APPWIDGET_UPDATE广播。这是唯一的广播,申明，您必须显式地声明。代表此类就是一个widget。AppWidgetManager
+    自动发送所有其他应用程序部件广播此注册的广播才能收到，也就是说我们必须要指定识别为widget的action，
+    当然你需要这个AppWidgetProvider接收接她action，ni。
+
+ <Mata_data>元素 指定AppWidgetProviderInfo 资源和需要以下属性:
+
+ android:name——指定Mata_data名称。使用android.appwidgetb必须确定AppWidgetProviderInfo描述符的数据。
+
+ android:resource——指定AppWidgetProviderInfo资源XML。
+            -->
+        </receiver>
+
+        <activity android:name=".Activity.CursorAdapterActivity"></activity>
+    </application>
+
+</manifest>
