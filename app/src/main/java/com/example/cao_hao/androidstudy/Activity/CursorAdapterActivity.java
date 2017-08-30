@@ -44,13 +44,12 @@ public class CursorAdapterActivity extends AppCompatActivity {
         */
 /**
          * 利用AsyncQueryHandler +CursorAdapter 能实现短信数据增加、删除时候UI同步更新,studio模拟手机向模拟器发送短信，模拟器收到短信后UI界面能同步更新
-         *//*
+         */
   mCursorAdapter = new MyCursorAdapter(this,null);
         MyQueryHandler queryHandler = new MyQueryHandler(getContentResolver());
         //执行查询语句，可以将adapter作为第二个参数传入
         queryHandler.startQuery(0, mCursorAdapter, Uri.parse(URI_SMS), null, null, null, null);
         mLvCursorAdapter.setAdapter(mCursorAdapter);
-*/
 
 
 

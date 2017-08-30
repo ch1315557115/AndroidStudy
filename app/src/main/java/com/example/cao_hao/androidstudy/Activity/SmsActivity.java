@@ -23,7 +23,7 @@ import java.util.List;
 import com.example.cao_hao.androidstudy.Adapter.SmsAdapter;
 import com.example.cao_hao.androidstudy.Brocadcast.SmsBrocadcastReceiver;
 import com.example.cao_hao.androidstudy.Observe.SmsObserve;
-import com.example.cao_hao.androidstudy.javabean.SmsInfo;
+import com.example.cao_hao.androidstudy.bean.SmsInfo;
 import com.example.cao_hao.androidstudy.utils.LogUtils;
 
 public class SmsActivity extends AppCompatActivity {

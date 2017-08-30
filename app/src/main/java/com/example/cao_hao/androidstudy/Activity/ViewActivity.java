@@ -1,7 +1,6 @@
 package com.example.cao_hao.androidstudy.Activity;
 
 import android.app.Activity;
-import android.content.res.Resources;
 import android.graphics.PixelFormat;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -9,18 +8,17 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
 import com.example.cao_hao.androidstudy.R;
 
 import com.example.cao_hao.androidstudy.View.MoveImage;
 
-public class ViewActivity extends Activity /* implementsView.OnTouchListener*/ {
+public class ViewActivity extends Activity  implements View.OnTouchListener {
 
     private MoveImage mMoveImage;
     private ImageView mImage;
     private ImageView mImage1;
-    private RelativeLayout parentView;
+    private View parentView;
 
     private WindowManager mManager;
     private WindowManager.LayoutParams mLayoutParams;
@@ -37,10 +35,10 @@ public class ViewActivity extends Activity /* implementsView.OnTouchListener*/ {
         mManager = getWindowManager();
         mLayoutParams = new WindowManager.LayoutParams(WindowManager.LayoutParams.WRAP_CONTENT,WindowManager.LayoutParams.WRAP_CONTENT,0,0, PixelFormat.TRANSPARENT);
 
-        mMoveImage = (MoveImage) findViewById(R.id.mi_image);
+//        mMoveImage = (MoveImage) findViewById(R.id.mi_image);
         mImage = (ImageView) findViewById(R.id.iv_image);
         mImage1 = (ImageView) findViewById(R.id.iv_image1);
-        mImage1.setOnTouchListener(new View.OnTouchListener() {
+   /*     mImage1.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                  //得到事件的坐标
@@ -56,24 +54,25 @@ public class ViewActivity extends Activity /* implementsView.OnTouchListener*/ {
 
                 return true;
             }
-        });
+        });*/
 
         ///
-        parentView = (RelativeLayout) mImage.getParent();
+//        parentView = (RelativeLayout) mImage.getParent();  //
+        parentView = getWindow().getDecorView();  //得到根布局的  滑动到底部位置有些问题
 
 
         // 获取屏幕密度（方法）
         int screenWidth = getWindowManager().getDefaultDisplay().getWidth(); // 屏幕宽（像素，如：px）
         int screenHeight = getWindowManager().getDefaultDisplay().getHeight(); // 屏幕高（像素，如：p）
-        mMoveImage.set(screenWidth,screenHeight,getStatusBarHeight());
+
 
         //设置touch监听
-//        mImage.setOnTouchListener(this);
+        mImage.setOnTouchListener(this);
     }
 
 
-  /*  @Override
-    public boolean onTouch(com.example.cao_hao.androidstudy.View v, MotionEvent event) {
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
         //得到事件的坐标
         int eventX = (int) event.getRawX();
         int eventY = (int) event.getRawY();
@@ -127,16 +126,4 @@ public class ViewActivity extends Activity /* implementsView.OnTouchListener*/ {
         }
         return true;//所有的motionEvent都交给imageView处理
     }
-*/
-    /**
-     * 获取底部菜单栏
-     * @return
-     */
-    private int getStatusBarHeight() {
-        Resources resources = getResources();
-        int resourceId = resources.getIdentifier("status_bar_height", "dimen","android");
-        int height = resources.getDimensionPixelSize(resourceId);
-        return height;
-    }
-
 }

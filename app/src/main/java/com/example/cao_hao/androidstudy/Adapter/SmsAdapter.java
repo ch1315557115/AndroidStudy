@@ -13,7 +13,7 @@ import com.example.cao_hao.androidstudy.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.cao_hao.androidstudy.javabean.SmsInfo;
+import com.example.cao_hao.androidstudy.bean.SmsInfo;
 
 /**
  * Created by cao-hao on 17-8-7.

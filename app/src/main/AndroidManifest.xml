@@ -49,8 +49,8 @@
 
         <receiver android:name=".widget.ClickAppWidget">
             <intent-filter>
-                <action android:name="click"></action>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"></action>
+                <action android:name="click" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
 
             <meta-data
@@ -73,7 +73,11 @@
             -->
         </receiver>
 
-        <activity android:name=".Activity.CursorAdapterActivity"></activity>
+        <activity android:name=".Activity.CursorAdapterActivity" />
+        <activity android:name=".Activity.SurfaceActivity" />
+        <activity android:name=".Activity.AIDLActivity" />
+        <activity android:name=".Activity.BundleActivity" />
+        <activity android:name=".Activity.BundleDesActivity"></activity>
     </application>
 
 </manifest>

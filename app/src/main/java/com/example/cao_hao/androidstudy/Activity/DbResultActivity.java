@@ -12,7 +12,7 @@ import java.util.List;
 
 import com.example.cao_hao.androidstudy.Adapter.DbAdapter;
 import com.example.cao_hao.androidstudy.db.DBHelper;
-import com.example.cao_hao.androidstudy.javabean.Person;
+import com.example.cao_hao.androidstudy.bean.Person;
 
 public class DbResultActivity extends AppCompatActivity {
     private ListView mListView;

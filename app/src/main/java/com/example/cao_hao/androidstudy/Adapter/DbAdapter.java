@@ -11,7 +11,7 @@ import com.example.cao_hao.androidstudy.R;
 
 import java.util.List;
 
-import com.example.cao_hao.androidstudy.javabean.Person;
+import com.example.cao_hao.androidstudy.bean.Person;
 
 /**
  * Created by cao-hao on 17-8-8.

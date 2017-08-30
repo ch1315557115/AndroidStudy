@@ -1,9 +1,13 @@
 package com.example.cao_hao.androidstudy.Activity;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +22,7 @@ import com.example.cao_hao.androidstudy.R;
 
 import java.util.ArrayList;
 
+import com.example.cao_hao.androidstudy.View.CustomDialog;
 import com.example.cao_hao.androidstudy.utils.LogUtils;
 
 public class MainActivity extends Activity {
@@ -72,13 +77,17 @@ public class MainActivity extends Activity {
         mArrayList.add("AsyncTask");
         mArrayList.add("Widget");
         mArrayList.add("CursorAdapte");
+        mArrayList.add("SurfaceView");
+        mArrayList.add("aidl");
+        mArrayList.add("Bundle");
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void onClick(int postion) {
         switch (postion) {
             case 0:
-                startActivity(new Intent(MainActivity.this, HandlerTestAcitvity.class));
+//                startActivity(new Intent(MainActivity.this, HandlerTestAcitvity.class));
                 break;
             case 1:
                 startActivity(new Intent(MainActivity.this, SmsActivity.class));
@@ -112,6 +121,15 @@ public class MainActivity extends Activity {
                 break;
             case 11:
                 startActivity(new Intent(MainActivity.this, CursorAdapterActivity.class));
+                break;
+            case 12:
+                startActivity(new Intent(MainActivity.this, SurfaceActivity.class));
+                break;
+            case 13:
+                startActivity(new Intent(MainActivity.this, AIDLActivity.class));
+                break;
+            case 14:
+                startActivity(new Intent(MainActivity.this, BundleActivity.class));
                 break;
         }
     }
@@ -194,7 +212,5 @@ public class MainActivity extends Activity {
         // 显示
         mPopupWindow.showAsDropDown(view);
     }
-
-    //2
 
 }

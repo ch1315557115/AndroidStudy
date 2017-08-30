@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.cao_hao.androidstudy.db.ContentProviderDBHelper;
-import com.example.cao_hao.androidstudy.javabean.User;
+import com.example.cao_hao.androidstudy.bean.User;
 import com.example.cao_hao.androidstudy.utils.LogUtils;
 import com.example.cao_hao.androidstudy.utils.MyApplication;
 

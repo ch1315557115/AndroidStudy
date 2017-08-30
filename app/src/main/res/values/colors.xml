@@ -13,6 +13,20 @@
     <color name="seekbarcolor">#f4511e</color>
     <color name="artist_background">#d3d3d3</color>
 
+    <!-- add by ts-wangxy -->
+    <color name="track_widget_stroke_color">#000000</color>
+    <color name="track_widget_selected_color">#1e90ff</color>
+    <color name="track_widget_thumb_color">#000000</color>
+    <color name="list_item_bg_dark">#0dffffff</color>
+    <color name="list_item_bg_light">#14ffffff</color>
+    <color name="artist_album_item_count_color">#80ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="track_widget_bg_color">#e4efee</color>
+   <!-- <color name="track_widget_selected_color">#00b7be</color>-->
+    <color name="item_title_color">#333333</color>
+    <color name="item_summary_color">#cccccc</color>
+    <color name="list_item_pressed">#d3d3d3</color>
+
     <color name="wave_color">#f4511e</color>
     <color name="wave_color_inactive">#000000</color>
     <color name="lyric_selected_text">#fff4511e</color>
@@ -62,7 +76,6 @@
     <!-- add end -->
 
     <!-- add for ts music -->
-    <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="progress_bar">#E3170D</color>
     <color name="artist_list_bg">#FFFAF0</color>
@@ -98,5 +111,7 @@
     <color name="list_item_light">#0CFFFFFF</color>
     <color name="list_item_gray">#15FFFFFF</color>
     <color name="queue_list_divide">#A6ABB6</color>
+
+    <color name="dialog_edit_text_color">#B7B7B7</color>
 
 </resources>

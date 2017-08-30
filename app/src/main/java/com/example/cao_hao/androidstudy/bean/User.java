@@ -1,4 +1,4 @@
-package com.example.cao_hao.androidstudy.javabean;
+package com.example.cao_hao.androidstudy.bean;
 
 /**
  * Created by cao-hao on 17-8-9.
