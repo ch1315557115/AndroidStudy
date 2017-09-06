@@ -23,15 +23,14 @@ public class MoveImage extends ImageView {
     int screenHeight;
     int statusBarHeight;
 
-    public void set(int screenWidth, int screenHeight,int statusBarHeight) {
+    public void set(int screenWidth, int screenHeight) {
         this.screenWidth = screenWidth;
         this.screenHeight = screenHeight;
-        this.statusBarHeight = statusBarHeight;
     }
 
     public MoveImage(Context context) {
         super(context);
-      /*  screenWidth = getScreenWidth(this);//获取屏幕宽度
+        /*screenWidth = getScreenWidth(this);//获取屏幕宽度
         screenHeight = getScreenHeight(this) - getStatusHeight(MainActivity.this);*/
     }
 

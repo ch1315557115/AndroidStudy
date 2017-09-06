@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate
+        android:duration="200"
+        android:fromYDelta="100%p"
+        android:toYDelta="0" />
+    <alpha
+        android:duration="200"
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0" />
+</set>
+    <!--android:fromAlpha   动画开始的透明度，从0.0 &#45;&#45;1.0 ，0.0表示全透明，1.0表示完全不透明
+    android:toAlpha       动画结束时的透明度，也是从0.0 &#45;&#45;1.0 ，0.0表示全透明，1.0表示完全不透明-->
+
+    <!--如果是100%p，那么就是表示在当前的左上角加上父控件宽度的100%做为起始点Y轴坐标。-->
+
+<!--如果放慢看动画效果
+ android:duration="2000"
+ 在将 R.style.dialog  里面 背景透明去掉（变成黑色了）
+ 会看到dialog动画是从屏幕最下面慢慢上升，
+
+   dialog背景是整个屏幕大小                 | - - - - -   -
+  相当于整个屏幕位置                        |
+                                         |
+                                         |黑色背景部分
+                                         |
+                                         |
+                                         |
+                                         |- - - - - - -
+                                         |
+                                         |dialog部分
+                                         |
+ -->
+    <!--
+    <translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="10000"
+    android:fromXDelta="320"
+    android:fromYDelta="480"
+    android:toXDelta="0"
+    android:toYDelta="0" />
+
+    fromXDelta,fromYDelta 起始时X，Y座标,屏幕右下角的座标是X:320,Y:480
+toXDelta，toYDelta 动画结束时X,Y的座标
+
+    在这些属性里面还可以加上%和p,例如:
+    Android:toXDelta="100%",表示自身的100%,也就是从View自己的位置开始。
+    Android:toXDelta="80%p",表示父层View的80%,是以它父层View为参照的。
+
+   可以是数值、百分数、百分数p 三种样式，比如 50、50%、50%p，当为数值时，表示在当前View的左上角，
+   即原点处加上50px，做为起始位移（缩放）点；如果是50%，表示在当前控件的左上角加上自己宽度的50%做为起始点；
+
+   如果是50%p，那么就是表示在当前的左上角加上父控件宽度的50%做为起始点x轴坐标。
+    -->

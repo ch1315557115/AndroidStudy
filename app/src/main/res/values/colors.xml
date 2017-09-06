@@ -20,7 +20,6 @@
     <color name="list_item_bg_dark">#0dffffff</color>
     <color name="list_item_bg_light">#14ffffff</color>
     <color name="artist_album_item_count_color">#80ffffff</color>
-    <color name="white">#ffffff</color>
     <color name="track_widget_bg_color">#e4efee</color>
    <!-- <color name="track_widget_selected_color">#00b7be</color>-->
     <color name="item_title_color">#333333</color>
@@ -35,10 +34,6 @@
     <color name="toolbar_title_text">#ffffffff</color>
     <color name="click_bg">#6621272B</color>
 
-    <!-- add by zhanghf -->
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
 
     <color name="result_view">#b0000000</color>
     <color name="viewfinder_mask">#60000000</color>
@@ -76,7 +71,6 @@
     <!-- add end -->
 
     <!-- add for ts music -->
-    <color name="black">#000000</color>
     <color name="progress_bar">#E3170D</color>
     <color name="artist_list_bg">#FFFAF0</color>
     <color name="home_music_list_bg">#C0C0C0</color>
@@ -113,5 +107,29 @@
     <color name="queue_list_divide">#A6ABB6</color>
 
     <color name="dialog_edit_text_color">#B7B7B7</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="mainColor">#573567</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="font_gray_b">#d4d4d3</color>
+
+    <color name="font_tab_1">#42369a</color>
+    <color name="font_tab_0">#b1b1b1</color>
+
+
+    <color name="font_common_1">#424242</color>
+    <color name="font_common_2">#a1a1a1</color>
+    <color name="font_blue">#42369a</color>
+
+    <color name="font_green">#00cccc</color>
+
+    <color name="commom_background">#f3f3f3</color>
+
 
 </resources>

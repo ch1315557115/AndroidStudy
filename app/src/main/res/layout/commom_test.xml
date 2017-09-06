@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_round_white"
+    android:id="@+id/ll_root"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="30dp"
+        android:text="提示"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:lineSpacingExtra="3dp"
+        android:text="签到成功，获得200积分"
+        android:textColor="@color/font_common_1"
+        android:textSize="16sp" />
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/commom_background" />-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/bg_dialog_right_white"
+            android:text="OK"
+            android:textColor="@color/font_common_2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/ok"
+            android:background="@drawable/bg_dialog_left_white"
+            android:text="CANCLE"
+            android:textColor="@color/font_common_2"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

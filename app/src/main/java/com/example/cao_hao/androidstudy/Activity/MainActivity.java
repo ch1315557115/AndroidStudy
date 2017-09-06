@@ -48,6 +48,7 @@ public class MainActivity extends Activity {
         mLvList.setAdapter(new MyAdapter());
 
         mLvList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 onClick(position);
@@ -72,7 +73,7 @@ public class MainActivity extends Activity {
         mArrayList.add("自定义内容提供者");
         mArrayList.add("文件读写操作");
         mArrayList.add("popupwindow");
-        mArrayList.add("自定义View");
+        mArrayList.add("自定义在屏幕内拖动控件");
         mArrayList.add("禁用底部返回键、菜单键、任务键");
         mArrayList.add("AsyncTask");
         mArrayList.add("Widget");
@@ -80,6 +81,11 @@ public class MainActivity extends Activity {
         mArrayList.add("SurfaceView");
         mArrayList.add("aidl");
         mArrayList.add("Bundle");
+        mArrayList.add("DialogActivity");
+        mArrayList.add("SearchView");
+        mArrayList.add("Bitmap绘制相关");
+        mArrayList.add("动画");
+
 
     }
 
@@ -130,6 +136,18 @@ public class MainActivity extends Activity {
                 break;
             case 14:
                 startActivity(new Intent(MainActivity.this, BundleActivity.class));
+                break;
+            case 15:
+                startActivity(new Intent(MainActivity.this, DialogActivity.class));
+                break;
+            case 16:
+                startActivity(new Intent(MainActivity.this, SearchActivity.class));
+                break;
+            case 17:
+                startActivity(new Intent(MainActivity.this, DrawBitmapActivity.class));
+                break;
+            case 18:
+                startActivity(new Intent(MainActivity.this, AnimationActivity.class));
                 break;
         }
     }
@@ -212,5 +230,7 @@ public class MainActivity extends Activity {
         // 显示
         mPopupWindow.showAsDropDown(view);
     }
+
+    //122
 
 }

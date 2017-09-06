@@ -1,0 +1,14 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.example.cao_hao.androidstudy.View.MyAnimView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.cao_hao.androidstudy.View.SoGouBrowserLoading
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

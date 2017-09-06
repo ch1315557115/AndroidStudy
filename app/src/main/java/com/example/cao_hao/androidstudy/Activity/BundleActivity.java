@@ -33,8 +33,8 @@ public class BundleActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_bundle);
-        setContentView(new RectView(this));
+        setContentView(R.layout.activity_bundle);
+
         mBtSeri = (Button) findViewById(R.id.bt_serializable);
         mBtParc = (Button) findViewById(R.id.bt_parcelable);
         intent = new Intent(BundleActivity.this, BundleDesActivity.class);

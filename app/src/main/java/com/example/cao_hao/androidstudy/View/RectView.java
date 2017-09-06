@@ -15,9 +15,14 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.example.cao_hao.androidstudy.R;
+import com.example.cao_hao.androidstudy.utils.BitmapUtils;
 
 /**
  * Created by cao-hao on 17-8-25.
+ *
+ * Bitmap绘制中的canvas paint 可以参考 http://blog.csdn.net/carson_ho/article/details/60598775
+ *
+ *  Bitmap常用方法可以见BitmapUtils工具类
  */
 
 public class RectView extends View {
@@ -41,66 +46,8 @@ public class RectView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        // 首先定义一个paint
-        Paint paint = new Paint();
-
-
-        paint.setColor(Color.RED);
-        // 设置样式-空心矩形
-        paint.setStyle(Paint.Style.STROKE);
-        // 绘制一个矩形
-
-
-        canvas.drawRect(left, top, right, bottom, paint);
-
-
-       /* paint.setColor(Color.YELLOW);
-        canvas.drawRect(250, 75, 350, 120, paint);
-
-
-        paint.setColor(Color.GREEN);
-
-
-        canvas.drawRect(150, 120, 250, 170, paint);
-
-
-        paint.setColor(Color.CYAN);
-        canvas.drawRect(250, 120, 350, 170, paint);
-
-
-        // 绘文字
-        // 设置颜色
-        paint.setColor(Color.BLACK);
-        // 绘文字
-        canvas.drawText("Hello1", 200, 90, paint);
-        canvas.drawText("Hello2", 300, 100, paint);
-        canvas.drawText("Hello3", 200, 150, paint);
-        canvas.drawText("Hello4", 300, 170, paint);
-*/
-
-        // 绘图
-        // 从资源文件中生成位图
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),
-                R.drawable.is_check);
-/*       *//* Rect Rect1 = new Rect(0, 0, 100, 100);
-        Rect Rect2 = new Rect(0, 0, 100, 100);*//*
-        // 绘图
-//        canvas.drawBitmap(bitmap, 120, 120, paint);
-//        Canvas canvas = new Canvas(target);
-        *//**
-         * 首先绘制圆形
-         *//*
-        int min = 60 ;
-        canvas.drawCircle(min / 2, min / 2, min / 2, paint);
-        *//**
-         * 使用SRC_IN
-         *//*
-        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
-        *//**
-         * 绘制图片
-         */
-//        canvas.drawBitmap(bitmap, left, top, paint);
-        drawBitmapPostScale(canvas,left,top,paint);
+//        drawTextCenter(canvas);
+        drawBitmapPostScale(canvas);
     }
 
     /**
@@ -108,10 +55,20 @@ public class RectView extends View {
      *
      * @param canvas
      */
-    private void drawBitmapPostScale(Canvas canvas,int left,int top,Paint paint) {
+    private void drawBitmapPostScale(Canvas canvas) {
+        // 首先定义一个paint
+        Paint paint = new Paint();
+
+        paint.setColor(Color.RED);
+        // 设置样式-空心矩形
+        paint.setStyle(Paint.Style.STROKE);
+        // 绘制一个矩形
+        /*Rect targetRect = new Rect(50, 50, 150, 150);
+        canvas.drawRect(targetRect, paint);*/
+
         // 获取图片资源
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),
-                R.drawable.is_check);
+                R.mipmap.icon_test);
       /*  // Matrix类进行图片处理（缩小或者旋转）
         Matrix matrix = new Matrix();
         // 缩小一倍
@@ -120,9 +77,30 @@ public class RectView extends View {
         Bitmap dstbmp = Bitmap.createBitmap(bmp1, 0, 0, bmp1.getWidth(),
                 bmp1.getHeight(), matrix, true);*/
         // 添加到canvas
-       int with =  this.getResources().getDimensionPixelSize(
-                R.dimen.with);
-        canvas.drawBitmap(bitmap, right -with, bottom-with, paint);
-//        canvas.drawBitmap(bitmap, 100, 100, paint);
+        canvas.drawBitmap(BitmapUtils.getRoundedCornerBitmap(bitmap), 50, 50, paint);
+
+//        canvas.drawCircle(50,50,30,paint);
+    }
+
+    /**
+     * 绘制文字在图形中居中
+     * 参考 地址 ：http://blog.csdn.net/hursing/article/details/18703599
+     * @param canvas
+     */
+    private void drawTextCenter(Canvas canvas){
+        Rect targetRect = new Rect(50, 50, 400, 150);
+        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        paint.setStrokeWidth(3);
+        paint.setTextSize(30);
+        String testString = "测试：ijkJQKA:1234";
+        paint.setColor(Color.CYAN);
+        canvas.drawRect(targetRect, paint);
+        paint.setColor(Color.RED);
+        Paint.FontMetricsInt fontMetrics = paint.getFontMetricsInt();
+        // 转载请注明出处：http://blog.csdn.net/hursing
+        int baseline = (targetRect.bottom + targetRect.top - fontMetrics.bottom - fontMetrics.top) / 2;
+        // 下面这行是实现水平居中，drawText对应改为传入targetRect.centerX()
+        paint.setTextAlign(Paint.Align.CENTER);
+        canvas.drawText(testString, targetRect.centerX(), baseline, paint);
     }
 }
