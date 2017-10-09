@@ -8,6 +8,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +26,7 @@ import java.util.ArrayList;
 import com.example.cao_hao.androidstudy.View.CustomDialog;
 import com.example.cao_hao.androidstudy.utils.LogUtils;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity{
 
     private ListView mLvList;
     private ArrayList<String> mArrayList = new ArrayList<String>();
@@ -85,6 +86,10 @@ public class MainActivity extends Activity {
         mArrayList.add("SearchView");
         mArrayList.add("Bitmap绘制相关");
         mArrayList.add("动画");
+        mArrayList.add("TestActivity");
+        mArrayList.add("图片跟随手指缩缩放");
+        mArrayList.add("矩阵变换");
+        mArrayList.add("ActionBarActivity");
 
 
     }
@@ -148,6 +153,18 @@ public class MainActivity extends Activity {
                 break;
             case 18:
                 startActivity(new Intent(MainActivity.this, AnimationActivity.class));
+                break;
+            case 19:
+                startActivity(new Intent(MainActivity.this,TestActivity.class));
+                break;
+            case 20:
+                startActivity(new Intent(MainActivity.this,ScaleImageViewActivity.class));
+                break;
+            case 21:
+                startActivity(new Intent(MainActivity.this,MatrixActivity.class));
+                break;
+            case 22:
+                startActivity(new Intent(MainActivity.this,ActionBarActivity.class));
                 break;
         }
     }

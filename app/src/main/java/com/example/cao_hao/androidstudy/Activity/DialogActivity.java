@@ -77,16 +77,16 @@ public class DialogActivity extends AppCompatActivity implements View.OnClickLis
                 dialog.dismiss();
                 switch (position) {
                     case 1:
-                        Utils.toast(DialogActivity.this, "微信好友");
+                        Utils.showToast(DialogActivity.this, "微信好友");
                         break;
                     case 2:
-                        Utils.toast(DialogActivity.this, "朋友圈");
+                        Utils.showToast(DialogActivity.this, "朋友圈");
                         break;
                     case 3:
-                        Utils.toast(DialogActivity.this, "QQ");
+                        Utils.showToast(DialogActivity.this, "QQ");
                         break;
                     case 4:
-                        Utils.toast(DialogActivity.this, "微博");
+                        Utils.showToast(DialogActivity.this, "微博");
                         break;
                 }
             }

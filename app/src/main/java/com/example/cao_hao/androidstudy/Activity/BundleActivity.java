@@ -1,9 +1,12 @@
 package com.example.cao_hao.androidstudy.Activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import com.example.cao_hao.androidstudy.R;
@@ -18,7 +21,7 @@ import com.example.cao_hao.androidstudy.bean.PersonSer;
  其中bundle.putParcelable可以实现传递对象，但是这个对象的类必须实现Parcelable接口才能够使用。
  */
 
-public class BundleActivity extends AppCompatActivity implements View.OnClickListener {
+public class BundleActivity extends Activity /*implements View.OnClickListener*/ {
     private static final String SER_KEY = "aaa";
     private static final String SER_TYPE = "aa";
     private static final String PAR_KEY = "bbb";
@@ -33,9 +36,17 @@ public class BundleActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_bundle);
 
-        mBtSeri = (Button) findViewById(R.id.bt_serializable);
+  /*      mBtSeri = (Button) findViewById(R.id.bt_serializable);
+        mBtSeri.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
         mBtParc = (Button) findViewById(R.id.bt_parcelable);
         intent = new Intent(BundleActivity.this, BundleDesActivity.class);
         bundle = new Bundle();
@@ -70,7 +81,7 @@ public class BundleActivity extends AppCompatActivity implements View.OnClickLis
                 intent.putExtras(bundle);
                 startActivity(intent);
                 break;
-        }
+        }*/
 
     }
 }

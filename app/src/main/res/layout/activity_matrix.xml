@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.cao_hao.androidstudy.View.Matrix.MatrixView
+        android:id="@+id/iv1"
+        android:layout_width="500dp"
+        android:layout_height="500dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bt_translate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="平移" />
+        <Button
+            android:id="@+id/bt_scale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="缩放" />
+        <Button
+            android:id="@+id/bt_rotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="旋转" />
+        <Button
+            android:id="@+id/bt_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重置" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

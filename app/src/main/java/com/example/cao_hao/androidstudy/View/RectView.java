@@ -26,10 +26,10 @@ import com.example.cao_hao.androidstudy.utils.BitmapUtils;
  */
 
 public class RectView extends View {
-    int left = 150;
+    /*int left = 150;
     int top = 75;
     int right = 400;
-    int bottom = 300;
+    int bottom = 300;*/
 
     public RectView(Context context) {
         super(context);
@@ -68,16 +68,17 @@ public class RectView extends View {
 
         // 获取图片资源
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),
-                R.mipmap.icon_test);
-      /*  // Matrix类进行图片处理（缩小或者旋转）
+                R.mipmap.heibian);
+
+//         Matrix类进行图片处理（缩小或者旋转）
         Matrix matrix = new Matrix();
-        // 缩小一倍
+//         缩小一倍
         matrix.postScale(1f, 1f);
-        // 生成新的图片
-        Bitmap dstbmp = Bitmap.createBitmap(bmp1, 0, 0, bmp1.getWidth(),
-                bmp1.getHeight(), matrix, true);*/
-        // 添加到canvas
-        canvas.drawBitmap(BitmapUtils.getRoundedCornerBitmap(bitmap), 50, 50, paint);
+//         生成新的图片
+        Bitmap dstbmp = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(),
+                bitmap.getHeight(), matrix, true);
+//         添加到canvas
+        canvas.drawBitmap(dstbmp, 0, 0, paint);
 
 //        canvas.drawCircle(50,50,30,paint);
     }

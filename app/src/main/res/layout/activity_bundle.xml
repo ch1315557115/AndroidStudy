@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
+<!--    <Button
         android:id="@+id/bt_serializable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:textAllCaps="true"
         android:text="parcelable"
-        />
+        />-->
 
     <com.example.cao_hao.androidstudy.View.RectView
         android:layout_width="wrap_content"

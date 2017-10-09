@@ -8,8 +8,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/PagerSlidingTabStripLibrary " />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/javatest" />
             <option value="$PROJECT_DIR$/searchview" />
+            <option value="$PROJECT_DIR$/touchimageview" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
